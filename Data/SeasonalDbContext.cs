@@ -20,14 +20,12 @@ public class SeasonalDbContext(DbContextOptions<SeasonalDbContext> options) : Db
             );
 
             modelBuilder.Entity<Season>().HasData(
-                new Season(1, 10, 1), // Apple is in season in week 10
-                new Season(2, 11, 1), // Apple is in season in week 11
-                new Season(3, 20, 2), // Carrot is in season in week 20
-                new Season(4, 21, 2), // Carrot is in season in week 21
-                new Season(5, 22, 3), // Strawberry is in season in week 22
-                new Season(6, 23, 3)  // Strawberry is in season in week 23
+                new Season(1, 10, 1), 
+                new Season(2, 11, 1), 
+                new Season(3, 10, 2), 
+                new Season(4, 11, 2), 
+                new Season(5, 22, 3),
+                new Season(6, 23, 3) 
             );
-
-
     }
 }
