@@ -34,7 +34,22 @@ public class ProduceController : ControllerBase
         {
             return NotFound();
         }
- Console.WriteLine($"Number of produces found: {_context.Produces.ToList().Count}"); // Add a console log here
+
         return produce;
+    }
+
+    [HttpGet("week/{weekNumber}")]
+    public async Task<ActionResult<IEnumerable<Season>>> GetProduceByWeek(int weekNumber)
+    {
+        var produceByWeek = await _context.Seasons
+                                    .Include(p => p.Produce)
+                                    .Where(s => s.WeekOfYear == weekNumber)
+                                    .ToListAsync();
+        if (produceByWeek == null)
+        {
+            return NotFound();
+        }
+        
+        return produceByWeek;
     }
 }

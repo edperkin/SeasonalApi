@@ -25,7 +25,15 @@ var sqlBuilder = new NpgsqlConnectionStringBuilder
 builder.Services.AddDbContext<SeasonalDbContext>(options =>
     options.UseNpgsql(sqlBuilder.ConnectionString));
 
+
 var app = builder.Build();
+
+using (var serviceScope = app.Services.CreateScope())
+    {
+        var dbContext = serviceScope.ServiceProvider.GetRequiredService<SeasonalDbContext>();
+        await dbContext.Database.EnsureDeletedAsync();
+        await dbContext.Database.EnsureCreatedAsync();
+    }
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
