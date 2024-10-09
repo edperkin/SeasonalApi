@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZjjZICXPPgA=",
+  "dgSpecHash": "oIBwZ8qwS9A=",
   "success": true,
-  "projectFilePath": "/Users/edperkin/dev/SeasonalApi/SeasonalApi/SeasonalApi.csproj",
+  "projectFilePath": "/Users/edperkin/dev/Seasonal/SeasonalApi/SeasonalApi.csproj",
   "expectedPackageFiles": [
     "/Users/edperkin/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/edperkin/.nuget/packages/microsoft.aspnetcore.openapi/8.0.8/microsoft.aspnetcore.openapi.8.0.8.nupkg.sha512",
