@@ -1,0 +1,6 @@
+@SeasonalApi_HostAddress = http://localhost:5064
+
+GET {{SeasonalApi_HostAddress}}/api/produce
+Accept: application/json
+
+###
