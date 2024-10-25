@@ -39,11 +39,11 @@ public class ProduceController : ControllerBase
     }
 
     [HttpGet("week/{weekNumber}")]
-    public async Task<ActionResult<IEnumerable<Season>>> GetProduceByWeek(int weekNumber)
+    public async Task<ActionResult<IEnumerable<Season>>> GetProduceByWeek(int weekNumber, [FromQuery] ProduceType produceType)
     {
         var produceByWeek = await _context.Seasons
-                                    .Include(p => p.Produce)
-                                    .Where(s => s.WeekOfYear == weekNumber)
+                                    .Include(s => s.Produce)
+                                    .Where(s => s.WeekOfYear == weekNumber && s.Produce != null && s.Produce.ProduceType == produceType)
                                     .ToListAsync();
         if (produceByWeek == null)
         {
