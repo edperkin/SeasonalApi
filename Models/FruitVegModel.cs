@@ -1,6 +1,6 @@
 namespace SeasonalApi.Models;
 
-public record Produce(int ProduceId, string Name, ProduceType ProduceType)
+public record Produce(int ProduceId, string Name, ProduceType ProduceType, string ImageUrl, string Colour)
 {
     public ICollection<Season> Seasons { get; init; } = new List<Season>();
 }
