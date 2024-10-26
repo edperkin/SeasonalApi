@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SeasonalApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b170b16c2a1c0fe4db2a8752f4179750aaed7466")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a0bf406dda5e844113bfdca0a67cfc04c5931373")]
 [assembly: System.Reflection.AssemblyProductAttribute("SeasonalApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SeasonalApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
