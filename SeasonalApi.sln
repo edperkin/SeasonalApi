@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeasonalApi", "SeasonalApi.csproj", "{239F70C1-2367-4197-BA09-0C91360D4AF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{239F70C1-2367-4197-BA09-0C91360D4AF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{239F70C1-2367-4197-BA09-0C91360D4AF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{239F70C1-2367-4197-BA09-0C91360D4AF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{239F70C1-2367-4197-BA09-0C91360D4AF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EDC07D69-BCF9-48E8-A1A8-C5D691B104EF}
+	EndGlobalSection
+EndGlobal

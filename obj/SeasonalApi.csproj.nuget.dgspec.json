@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/edperkin/dev/SeasonalApi/SeasonalApi/SeasonalApi.csproj": {}
+    "/Users/edperkin/dev/Seasonal/SeasonalApi/SeasonalApi.csproj": {}
   },
   "projects": {
-    "/Users/edperkin/dev/SeasonalApi/SeasonalApi/SeasonalApi.csproj": {
+    "/Users/edperkin/dev/Seasonal/SeasonalApi/SeasonalApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/edperkin/dev/SeasonalApi/SeasonalApi/SeasonalApi.csproj",
+        "projectUniqueName": "/Users/edperkin/dev/Seasonal/SeasonalApi/SeasonalApi.csproj",
         "projectName": "SeasonalApi",
-        "projectPath": "/Users/edperkin/dev/SeasonalApi/SeasonalApi/SeasonalApi.csproj",
+        "projectPath": "/Users/edperkin/dev/Seasonal/SeasonalApi/SeasonalApi.csproj",
         "packagesPath": "/Users/edperkin/.nuget/packages/",
-        "outputPath": "/Users/edperkin/dev/SeasonalApi/SeasonalApi/obj/",
+        "outputPath": "/Users/edperkin/dev/Seasonal/SeasonalApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/edperkin/.nuget/NuGet/NuGet.Config"
