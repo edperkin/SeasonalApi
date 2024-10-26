@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using SeasonalApi.DTOs;
 using SeasonalApi.Models;
 
 [Route("api/[controller]")]
@@ -39,7 +40,7 @@ public class ProduceController : ControllerBase
     }
 
     [HttpGet("week/{weekNumber}")]
-    public async Task<ActionResult<IEnumerable<Season>>> GetProduceByWeek(int weekNumber, [FromQuery] ProduceType produceType)
+    public async Task<ActionResult<IEnumerable<ProduceDto>>> GetProduceByWeek(int weekNumber, [FromQuery] ProduceType produceType)
     {
         var produceByWeek = await _context.Seasons
                                     .Include(s => s.Produce)
@@ -49,7 +50,16 @@ public class ProduceController : ControllerBase
         {
             return NotFound();
         }
+
+        var weeksRemainingCount = 0;
         
-        return produceByWeek;
+        foreach (var produce in produceByWeek)
+        {
+            var seasonList =  await _context.Seasons.Where(s => s.ProduceId == produce.ProduceId).ToListAsync();
+
+            weeksRemainingCount += seasonList.Count(season => season.WeekOfYear > weekNumber);
+        }
+
+        return produceByWeek.Select(produce => new ProduceDto(produce.Produce.Name, produce.Produce.ImageUrl, produce.Produce.Colour, weeksRemainingCount)).ToList();
     }
 }
